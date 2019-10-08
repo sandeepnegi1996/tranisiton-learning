@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-container {
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    margin: 30px auto;
+    position: relative;
+}
+
+.image-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.image-after {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 600ms ease;
+}
+
+.image-after:hover {
+    opacity: 1;
+}
+
+.fade::after {
+    content: "Hi, I am sandeep software Developer ";
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* it will center in the width */
+    align-items: center;
+    font-size: 20px;
+    background: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.fade:hover::after {
+    opacity: 0.5;
+}
